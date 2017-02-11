@@ -18,13 +18,7 @@ The steps used to build this model are as following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image2]: ./examples/placeholder.png "Grayscaling"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
+[image1]: ./model_vis.png "Model Visualization"
 
 ---
 
@@ -48,9 +42,9 @@ The model.py file contains the code for training and saving the convolution neur
 ####1. Model Inspiration
 
 This model is based on the architecture of [Nvidia's end to end deep learning architecture](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) 
-The model consists of 5 convolution neural network layers with 3x3 and 5x5 filter sizes and depths between 24 and 64 
+The model consists of 5 convolution neural network layers with 3x3 and 5x5 filter sizes and depths between 24 and 64 followed by 3 fully connected layers. It has dropouts after first convolutional layer, first fully connected layer and second fully connected layer to reduce overfitting.
 
-The model includes RELU layers to introduce nonlinearity and the data is normalized and cropped in the model using Keras lambda and cropping2d layer.
+The model includes RELU layers to introduce nonlinearity and the data is normalized and cropped in the model using Keras lambda and cropping2d layer. Cropping and normalizing in the model itself increased the speed as it was done on gpu which was much faster.
 
 ####2. Attempts to reduce overfitting in the model
 
@@ -86,7 +80,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 ####2. Final Model Architecture
 
-The final model architecture consisted of a 5 convolution neural net layers with kernel size 5x5 in first three and then 3x3 in the next two and a droput after first layer. This was followed by 5 fully connected layer having dropouts after first two layers.
+The final model architecture consisted of a 5 convolution neural net layers with kernel size 5x5 in first three and then 3x3 in the next two and a droput after first layer. This was followed by 3 fully connected layer having dropouts after first two layers.
 
 Here is a visualization of the architecture:
 
