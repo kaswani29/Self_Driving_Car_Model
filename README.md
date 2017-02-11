@@ -3,9 +3,11 @@
 ###Running a car in Udacity self driving car simulator using nvidia end to end self driving deep learning architecture
 
 
+[![Running car on the simulator (video)](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
 ---
 
-####1. Layout followed for this project
+####1. Overview
 
 The steps used to build this model are as following:
 * Use the simulator to collect data of good driving behavior
@@ -43,7 +45,7 @@ The model.py file contains the code for training and saving the convolution neur
 
 ###Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+####1. Model Inspiration
 
 This model is based on the architecture of [Nvidia's end to end deep learning architecture](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) 
 The model consists of 5 convolution neural network layers with 3x3 and 5x5 filter sizes and depths between 24 and 64 
