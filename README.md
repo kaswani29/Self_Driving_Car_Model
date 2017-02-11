@@ -3,7 +3,7 @@
 ###Running a car in Udacity self driving car simulator using nvidia end to end self driving deep learning architecture
 
 
-[![Running car on the simulator (video)](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![Running car on the simulator (video)](./youtube.jpg)](https://www.youtube.com/watch?v=UvCSL5qdOko)
 
 ---
 
