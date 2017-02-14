@@ -3,7 +3,7 @@
 ###Running a car in Udacity self driving car simulator using nvidia end to end self driving deep learning architecture
 
 
-[![Running car on the simulator (video)](./youtube.jpg)](https://www.youtube.com/watch?v=UvCSL5qdOko)
+[![Running car on the simulator (video)](./examples/youtube.jpg)](https://www.youtube.com/watch?v=UvCSL5qdOko)
 
 ---
 
@@ -18,7 +18,13 @@ The steps used to build this model are as following:
 
 [//]: # (Image References)
 
-[image1]: ./model_vis.png "Model Visualization"
+[image1]: ./examples/model_vis.png "Model Visualization"
+[image2]: ./examples/center_2016_12_01_13_34_37_957.jpg "Right turn: 29.3 degree"
+[image3]: ./examples/center_2016_12_01_13_40_10_569.jpg "Left turn: -35.5 degree"
+[image4]: ./examples/center_2016_12_01_13_33_36_298.jpg "Straight- 0 degree"
+[image5]: ./examples/model_vis.png "Model Visualization"
+[image6]: ./examples/distribution.png "Dataset Distribution"
+
 
 ---
 
@@ -88,10 +94,19 @@ Here is a visualization of the architecture:
 
 ####3. Creation of the Training Set & Training Process
 
-To capture good driving behavior, few laps were recorded on the track one using center lane driving. The key to success was data distribution. After the data was balanced by removing images closer to 0 degree angle the model started really well. To increase the size of the dataset augmented data was also used. I also flipped images and angles thinking that this would result in model being more balanced to turn both sides as the track was just turning clockwise. 
+To capture good driving behavior, few laps were recorded on the track one using center lane driving. The key to success was data distribution. After the data was balanced by removing images closer to 0 degree angle the model started really well. The distribution looked liked this:
+
+![alt text][image6]
+
+Images that were being feeded to model with steering angle looked like below for different angles:
+
+![alt text][image3] ![alt text][image4] ![alt text][image2]
+
+To increase the size of the dataset augmented data was also used. I also flipped images and angles thinking that this would result in model being more balanced to turn both sides as the track was just turning clockwise.
+
 I also used images from the other two cameras to teach model recovery by using corrected steering angle for the side cameras.
 
-I finally randomly shuffled the data set and put 20% of the data into a validation set. 
+I finally randomly shuffled the data set which after augmentation was 7224 samples of which 20% of the data was put aside for validation set.
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 10 as evidenced by no significant change in mse loss after that. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
