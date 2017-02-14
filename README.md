@@ -100,7 +100,14 @@ To capture good driving behavior, few laps were recorded on the track one using 
 
 Images that were being feeded to model with steering angle looked like below for different angles:
 
-![alt text][image3] ![alt text][image4] ![alt text][image2]
+"Left turn: -35.5 degree"
+![alt text][image3] 
+
+"Straight- 0 degree"
+![alt text][image4] 
+
+"Left turn: -35.5 degree"
+![alt text][image2]
 
 To increase the size of the dataset augmented data was also used. I also flipped images and angles thinking that this would result in model being more balanced to turn both sides as the track was just turning clockwise.
 
