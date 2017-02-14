@@ -98,7 +98,7 @@ To capture good driving behavior, few laps were recorded on the track one using 
 
 ![alt text][image6]
 
-Images that were being feeded to model with steering angle looked like below for different angles: Left turn (29.3 degree), Straight (0 degree) and Right turn (-35.5 degree) :
+Images that were being feeded to model with steering angle looked like below for different angles: Right turn (29.3 degree), Straight (0 degree) and Left turn (-35.5 degree) :
 
 
 ![alt text][image3] 
