@@ -19,8 +19,8 @@ The steps used to build this model are as following:
 [//]: # (Image References)
 
 [image1]: ./examples/model_vis.png "Model Visualization"
-[image2]: ./examples/center_2016_12_01_13_34_37_957.jpg "Right turn: 29.3 degree"
-[image3]: ./examples/center_2016_12_01_13_40_10_569.jpg "Left turn: -35.5 degree"
+[image2]: ./examples/center_2016_12_01_13_34_37_957.jpg "Left turn: 29.3 degree"
+[image3]: ./examples/center_2016_12_01_13_40_10_569.jpg "Right turn: -35.5 degree"
 [image4]: ./examples/center_2016_12_01_13_33_36_298.jpg "Straight- 0 degree"
 [image5]: ./examples/model_vis.png "Model Visualization"
 [image6]: ./examples/distribution.png "Dataset Distribution"
@@ -98,9 +98,9 @@ To capture good driving behavior, few laps were recorded on the track one using 
 
 ![alt text][image6]
 
-Images that were being feeded to model with steering angle looked like below for different angles:
+Images that were being feeded to model with steering angle looked like below for different angles: Left turn (29.3 degree), Straight (0 degree) and Right turn (-35.5 degree) :
 
-"Left turn: -35.5 degree"
+
 ![alt text][image3] 
 
 "Straight- 0 degree"
