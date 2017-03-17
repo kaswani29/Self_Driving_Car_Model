@@ -1,13 +1,13 @@
-#**Behavioral Cloning** 
+**Behavioral Cloning** 
 
-###Running a car in Udacity self driving car simulator using nvidia end to end self driving deep learning architecture
+### Running a car in Udacity self driving car simulator using nvidia end to end self driving deep learning architecture
 
 
 [![Running car on the simulator (video)](./examples/youtube.jpg)](https://www.youtube.com/watch?v=UvCSL5qdOko)
 
 ---
 
-####1. Overview
+#### 1. Overview
 
 The steps used to build this model are as following:
 * Use the simulator to collect data of good driving behavior
@@ -33,44 +33,44 @@ This  repository includes the following files:
 * drive.py for driving the car in autonomous mode
 * model.h5 containing a trained convolution neural network
 
-####2.  How to run the model ?
+#### 2.  How to run the model ?
 Using the Udacity provided simulator which it has open sourced now and my drive.py file, the car can be driven autonomously around the track by executing 
 ```
 python drive.py model.h5
 ```
 
-####3. Pipeline of the project code 
+#### 3. Pipeline of the project code 
 
 The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Model Inspiration
+#### 1. Model Inspiration
 
 This model is based on the architecture of [Nvidia's end to end deep learning architecture](http://images.nvidia.com/content/tegra/automotive/images/2016/solutions/pdf/end-to-end-dl-using-px.pdf) 
 The model consists of 5 convolution neural network layers with 3x3 and 5x5 filter sizes and depths between 24 and 64 followed by 3 fully connected layers. It has dropouts after first convolutional layer, first fully connected layer and second fully connected layer to reduce overfitting.
 
 The model includes RELU layers to introduce nonlinearity and the data is normalized and cropped in the model using Keras lambda and cropping2d layer. Cropping and normalizing in the model itself increased the speed as it was done on gpu which was much faster.
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 The model contains two dropout layers between first two fully connected layers which were not a part of original Nvidia paper to avoid overfitting to this track.
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer to optimize learning rate automatically.
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road, using images from left and right camera with steering correction etc 
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 The overall strategy for deriving a model architecture was to study similar which were used for similar use cases and try to implement them as well as tweaking them as needed.
 
@@ -84,7 +84,7 @@ The final step was to run the simulator to see how well the car was driving arou
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 The final model architecture consisted of a 5 convolution neural net layers with kernel size 5x5 in first three and then 3x3 in the next two and a droput after first layer. This was followed by 3 fully connected layer having dropouts after first two layers.
 
@@ -92,7 +92,7 @@ Here is a visualization of the architecture:
 
 ![alt text][image1]
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 To capture good driving behavior, few laps were recorded on the track one using center lane driving. The key to success was data distribution. After the data was balanced by removing images closer to 0 degree angle the model started really well. The distribution looked liked this:
 
